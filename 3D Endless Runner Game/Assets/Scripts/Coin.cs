@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float turnSpeed = 90f;
-    private void onTriggerEnter(Collider coin)
+    private void OnTriggerEnter(Collider coin)
     {
         if(coin.gameObject.GetComponent<Obstacle>() != null)
         {

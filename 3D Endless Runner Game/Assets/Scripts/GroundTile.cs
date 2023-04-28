@@ -15,7 +15,7 @@ public class GroundTile : MonoBehaviour
         SpawnCoins();
     }
 
-    private void onTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         groundSpawner.SpawnTile();
         Destroy(gameObject, 2);
@@ -39,25 +39,30 @@ public class GroundTile : MonoBehaviour
     void SpawnCoins()
     {
         int coinsToSpawn = 10;
-        for(int i =0; i < coinsToSpawn; i++)
+        float[] laneXPositions = { -2.5f, 0f, 2.5f }; // Pre-defined x-axis positions for the lanes
+        for (int i = 0; i < coinsToSpawn; i++)
         {
             GameObject temp = Instantiate(coinPrefab, transform);
-            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>()); 
+            Vector3 coinSpawnPoint = GetRandomPointInCollider(GetComponent<Collider>(), laneXPositions);
+            temp.transform.position = coinSpawnPoint;
         }
     }
 
-    Vector3 GetRandomPointInCollider(Collider collider)
+    Vector3 GetRandomPointInCollider(Collider collider,float[] laneXPositions)
     {
+        float randomXPosition = laneXPositions[Random.Range(0, laneXPositions.Length)]; // Choose random x-axis position from the pre-defined lane positions
         Vector3 point = new Vector3(
-            Random.Range(collider.bounds.min.x, collider.bounds.max.x),
+            randomXPosition,
             Random.Range(collider.bounds.min.y, collider.bounds.max.y),
             Random.Range(collider.bounds.min.z, collider.bounds.max.z)
-            );
-        if(point != collider.ClosestPoint(point))
+        );
+        if (point != collider.ClosestPoint(point))
         {
-            point = GetRandomPointInCollider(collider);
+            point = GetRandomPointInCollider(collider, laneXPositions);
         }
-        point.y = 1;
+        point.y = 0.5f; // Set the coin to spawn slightly above the ground
         return point;
     }
+
+
 }
