@@ -1,4 +1,4 @@
-com.A_t234.Acorn
+com.A_t234.Runner
 id unitySurfaceView
 mipmap app_icon
 mipmap app_icon_round

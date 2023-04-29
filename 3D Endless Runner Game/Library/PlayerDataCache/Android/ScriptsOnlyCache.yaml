@@ -6,7 +6,9 @@ ScriptsOnlyBuild:
     - GameManager
     - GroundSpawner
     - GroundTile
+    - MainMenu
     - Obstacle
+    - PauseMenu
     - PlayerMovement
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -15,11 +17,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -28,9 +33,14 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -46,18 +56,112 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
-  methodsToPreserve: []
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: PlayGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Continue
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Pause
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Quit
   sceneClasses:
+    Assets/Scenes/Main Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1582}
+    - Class: 114
+      Script: {instanceID: 2150}
+    - Class: 114
+      Script: {instanceID: 2276}
+    - Class: 114
+      Script: {instanceID: 2558}
+    - Class: 114
+      Script: {instanceID: 2760}
+    - Class: 114
+      Script: {instanceID: 3032}
+    - Class: 114
+      Script: {instanceID: 4016}
+    - Class: 114
+      Script: {instanceID: 4264}
+    - Class: 114
+      Script: {instanceID: 4940}
+    - Class: 114
+      Script: {instanceID: 5474}
+    - Class: 114
+      Script: {instanceID: 5618}
+    - Class: 114
+      Script: {instanceID: 5926}
+    - Class: 114
+      Script: {instanceID: 6324}
+    - Class: 114
+      Script: {instanceID: 29922}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -76,8 +180,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -102,13 +204,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 2150}
+      Script: {instanceID: 1766}
+    - Class: 114
+      Script: {instanceID: 1898}
     - Class: 114
       Script: {instanceID: 2558}
     - Class: 114
       Script: {instanceID: 2760}
+    - Class: 114
+      Script: {instanceID: 3032}
     - Class: 114
       Script: {instanceID: 3354}
     - Class: 114
@@ -116,11 +222,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4010}
     - Class: 114
-      Script: {instanceID: 4016}
-    - Class: 114
       Script: {instanceID: 4182}
-    - Class: 114
-      Script: {instanceID: 4264}
     - Class: 114
       Script: {instanceID: 4836}
     - Class: 114
@@ -130,9 +232,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5474}
     - Class: 114
+      Script: {instanceID: 5618}
+    - Class: 114
       Script: {instanceID: 5926}
     - Class: 114
+      Script: {instanceID: 6324}
+    - Class: 114
       Script: {instanceID: 7514}
+    - Class: 114
+      Script: {instanceID: 32532}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,6 +254,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -974,7 +1084,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e6e9779cc6accb908339ddb884253389
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: fe08664c3172df6c6f552cc2422f9c71
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/newfeaturre.apk
+  playerPath: C:/Users/Tamrakar/Desktop/3DEndless.apk
