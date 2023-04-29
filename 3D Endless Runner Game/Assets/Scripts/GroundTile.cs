@@ -35,7 +35,7 @@ public class GroundTile : MonoBehaviour
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
 
-    public GameObject coinPrefab;
+   public GameObject coinPrefab;
     void SpawnCoins()
     {
         int coinsToSpawn = 10;
@@ -64,5 +64,5 @@ public class GroundTile : MonoBehaviour
         return point;
     }
 
-
+    
 }

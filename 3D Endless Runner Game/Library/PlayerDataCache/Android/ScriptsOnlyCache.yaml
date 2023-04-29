@@ -466,7 +466,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: f1cb407f2d8a7ae38304f7aa502b35c4
+      Hash: c3a47cd7bd59e99af9176db711bdadc5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -977,4 +977,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/milyoo.apk
+  playerPath: C:/Users/Tamrakar/Desktop/jumper.apk

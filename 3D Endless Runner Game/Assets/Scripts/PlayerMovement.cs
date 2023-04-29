@@ -16,9 +16,16 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 swipeStartPosition;
     private bool isSwiping = false;
 
+    private bool isJumping = false;
+    public float jumpForce = 2f;
+
     void Start()
     {
         currentLane = 0; // start in a random lane
+        rgbody = GetComponent<Rigidbody>();
+        Physics.gravity = new Vector3(0, -20f, 0);
+        rgbody.mass = 1f;
+        rgbody.drag = 0.5f;
     }
     private void FixedUpdate()
     {
@@ -32,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
         float deltaX = targetX - transform.position.x;
         Vector3 horizontalMove = Vector3.right * deltaX / laneWidth *speed * horizontalMultiplier * Time.fixedDeltaTime;
 
+        if(isJumping == true)
+        {
+            rgbody.AddForce(Vector3.up * jumpForce);
+            isJumping = false;
+        }
         rgbody.MovePosition(rgbody.position + forwardMove + horizontalMove);
     }
 
@@ -52,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
             else if (touch.phase == TouchPhase.Moved && isSwiping)
             {
                 float deltaX = touch.position.x - swipeStartPosition.x;
+                float deltaY = touch.position.y - swipeStartPosition.y;
                 if (Mathf.Abs(deltaX) > 50) // threshold to detect swipe
                 {
                     // determine the target lane based on the current lane and swipe direction
@@ -87,6 +100,12 @@ public class PlayerMovement : MonoBehaviour
 
                     isSwiping = false;
                 }
+                else if(deltaY > 50 && !isJumping && rgbody.velocity.y ==0 && Mathf.Abs(deltaX) < 50)
+                {
+                    //rgbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                    isJumping = true;
+                    isSwiping = false;
+                }
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -104,8 +123,9 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         alive = false;
-
+        rgbody.constraints = RigidbodyConstraints.None;
         Invoke("Restart", 1);
+        Physics.gravity = new Vector3(0, -9.81f, 0);
 
     }
     void Restart()
