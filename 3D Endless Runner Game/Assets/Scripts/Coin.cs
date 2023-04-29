@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    //speed of coin rotating
     public float turnSpeed = 90f;
+
+    /// <summary>
+    /// If player collides with coin then score is incremented
+    /// else it is returned
+    /// if collided object does not have obstace component then func is returned
+    /// </summary>
+    /// <param name="coin"></param>
     private void OnTriggerEnter(Collider coin)
     {
         if(coin.gameObject.GetComponent<Obstacle>() != null)
@@ -28,6 +36,9 @@ public class Coin : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Rotates coin
+    /// </summary>
     void Update()
     {
         transform.Rotate(0, 0, turnSpeed * Time.deltaTime);

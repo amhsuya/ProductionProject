@@ -4,34 +4,47 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5;
-    public Rigidbody rgbody;
-
+    public float speed = 5f;
     public float horizontalMultiplier = 3f;
+
+    public Rigidbody rgbody;
+   
     bool alive = true;
 
 
-    public float laneWidth = 2; // distance between lanes
+    public float laneWidth = 2f; // distance between lanes
     public int currentLane = 0; // start in middle lane
-    private Vector2 swipeStartPosition;
-    private bool isSwiping = false;
 
+    private Vector2 swipeStartPosition;
+
+    private bool isSwiping = false;
     private bool isJumping = false;
+
     public float jumpForce = 2f;
 
+    public float increaseSpeed = 0.5f;
+
+    /// <summary>
+    /// Components are initialized 
+    /// Called by engine automatically at the beginning
+    /// </summary>
     void Start()
     {
         currentLane = 0; // start in a random lane
         rgbody = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -20f, 0);
-        rgbody.mass = 1f;
-        rgbody.drag = 0.5f;
+        rgbody.mass = 1f; //mass of rigid body
+        rgbody.drag = 0.5f; //dragged by gravity
     }
+    /// <summary>
+    /// Called at fixed interval
+    /// calculates and updates value of player to move forward, horizontal and up 
+    /// </summary>
     private void FixedUpdate()
     {
         if (!alive)  return;
         
-        //50 times 
+        //moves player forward
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
         
 
@@ -47,9 +60,10 @@ public class PlayerMovement : MonoBehaviour
         rgbody.MovePosition(rgbody.position + forwardMove + horizontalMove);
     }
 
-
-
-    // Update is called once per frame
+    /// <summary>
+    /// Called once per frame
+    /// checks for user input and updates
+    /// </summary>
     void Update()
     {
         if (Input.touchCount == 1) // only handle single touch
@@ -118,8 +132,12 @@ public class PlayerMovement : MonoBehaviour
             Die();
 
         }
+        speed += increaseSpeed * Time.deltaTime;
+       
     }
-
+    /// <summary>
+    /// Character dies and resets gravity and restart game after a second
+    /// </summary>
     public void Die()
     {
         alive = false;
@@ -128,6 +146,10 @@ public class PlayerMovement : MonoBehaviour
         Physics.gravity = new Vector3(0, -9.81f, 0);
 
     }
+    /// <summary>
+    /// Loads a new scene where
+    /// Game objects and variable are reset to their initial state after player has lost
+    /// </summary>
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
