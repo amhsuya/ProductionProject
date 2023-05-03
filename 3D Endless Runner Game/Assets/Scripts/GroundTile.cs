@@ -5,12 +5,16 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
+    LeftSideSpawner left;
+    RightSideSpawner right;
     public GameObject obstaclePrefab;
 
     // Start is called before the first frame update
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
+        left = GameObject.FindObjectOfType<LeftSideSpawner>();
+        right = GameObject.FindObjectOfType<RightSideSpawner>();
         SpawnObstacle();
         SpawnCoins();
     }
@@ -18,6 +22,9 @@ public class GroundTile : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         groundSpawner.SpawnTile();
+        left.SpawnLeftTile();
+        right.SpawnRightTile();
+      
         Destroy(gameObject, 2);
     }
     // Update is called once per frame

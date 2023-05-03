@@ -1,26 +1,34 @@
-
 using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
     public GameObject groundTile;
     Vector3 nextSpawnPoint;
-    // Start is called before the first frame update
+
+    public GameObject backDrop;
+
+ 
+
     void Start()
     {
+       
         for(int i = 0; i < 15; i++)
         {
             SpawnTile();
         }
     }
+   void Update()
+    {
+        float playerZ = Camera.main.transform.position.z;
+        playerZ += 900;
+        Vector3 backgroundMovement = new Vector3(0, 120, playerZ);
+        backDrop.transform.position = backgroundMovement;
+    }
+  
     public void SpawnTile()
     {
-        GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
-        // obj to spawn, where to spawn, rotation
-
-        nextSpawnPoint = temp.transform.GetChild(1).transform.position;
-        // grand tile newspawnpoint in 1 index
-        //get transform component
+        GameObject newTile = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        nextSpawnPoint = newTile.transform.GetChild(1).transform.position;
     }
 
     
