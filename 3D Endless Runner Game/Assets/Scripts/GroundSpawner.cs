@@ -7,14 +7,22 @@ public class GroundSpawner : MonoBehaviour
 
     public GameObject backDrop;
 
- 
+   public GameObject leftSpawnPoint;
+    Vector3 nextLeftSpawnPoint;
+
+    public GameObject rightSpawnPoint;
+    Vector3 nextRightSpawnPoint;
+
+    public int tilesSpawnedCount = 0;
+
 
     void Start()
     {
        
-        for(int i = 0; i < 15; i++)
+        for(int i = 0; i < 19; i++)
         {
             SpawnTile();
+           
         }
     }
    void Update()
@@ -29,7 +37,25 @@ public class GroundSpawner : MonoBehaviour
     {
         GameObject newTile = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
         nextSpawnPoint = newTile.transform.GetChild(1).transform.position;
+
+        GameObject newLeftTile = Instantiate(leftSpawnPoint, nextLeftSpawnPoint, Quaternion.identity);
+        nextLeftSpawnPoint = newLeftTile.transform.GetChild(1).transform.position;
+
+          GameObject newRightTile = Instantiate(rightSpawnPoint, nextRightSpawnPoint, Quaternion.identity);
+        nextRightSpawnPoint = newRightTile.transform.GetChild(1).transform.position;
+
+        GroundTile ground = newTile.GetComponent<GroundTile>();
+        ground.leftTile = newLeftTile;
+        ground.rightTile = newRightTile;
+
+        tilesSpawnedCount++;
+        
     }
 
+    public int GetTilesSpawnedCount()
+    {
+        return tilesSpawnedCount;
+    }
+  
     
 }

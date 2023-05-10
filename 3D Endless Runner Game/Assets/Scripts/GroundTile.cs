@@ -5,27 +5,33 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
-    LeftSideSpawner left;
-    RightSideSpawner right;
+ 
     public GameObject obstaclePrefab;
+   
+
+    public GameObject leftTile;
+   public GameObject rightTile;
+
 
     // Start is called before the first frame update
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-        left = GameObject.FindObjectOfType<LeftSideSpawner>();
-        right = GameObject.FindObjectOfType<RightSideSpawner>();
+ 
+    
         SpawnObstacle();
         SpawnCoins();
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         groundSpawner.SpawnTile();
-        left.SpawnLeftTile();
-        right.SpawnRightTile();
-      
+
+        Destroy(leftTile, 2);
+        Destroy(rightTile, 2);
         Destroy(gameObject, 2);
+        
     }
     // Update is called once per frame
     void Update()
@@ -41,6 +47,7 @@ public class GroundTile : MonoBehaviour
         //quaternion no rotation
         Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
     }
+
 
    public GameObject coinPrefab;
     void SpawnCoins()
@@ -71,5 +78,7 @@ public class GroundTile : MonoBehaviour
         return point;
     }
 
-    
+ 
+
+
 }

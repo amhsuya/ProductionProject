@@ -11,7 +11,7 @@ ScriptsOnlyBuild:
     - Obstacle
     - PauseMenu
     - PlayerMovement
-    - RightSideSpawner
+    - RightSideSpawner1
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -20,14 +20,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -238,8 +230,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5980}
     - Class: 114
-      Script: {instanceID: 6370}
-    - Class: 114
       Script: {instanceID: 6384}
     - Class: 114
       Script: {instanceID: 6506}
@@ -247,6 +237,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6972}
     - Class: 114
       Script: {instanceID: 7592}
+    - Class: 114
+      Script: {instanceID: 79324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -684,7 +676,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 13378d3ed9445128cceb7b532fa28bc3
+      Hash: 899ce38ce16141a106e2965e912b14a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GroundSpawner
@@ -924,12 +916,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 6727578b37604a1439aa8c1a70f0bc8e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RightSideSpawner
-  - hash:
-      serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1026,7 +1012,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e8699d099f13dc4e4b467a6ff8876429
+      Hash: 870f3a83f9ca8ec25672fef5397f28cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LeftSideSpawner
@@ -1086,7 +1072,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: b73e3badf3851bd58253c7f6c2c04597
+      Hash: f7df270958580e4e0bd41c44a4eb16a1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GroundTile
@@ -1114,8 +1100,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: af76b8b2a02b05fe1a73edd44d79889e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RightSideSpawner1
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/YAY.apk
+  playerPath: C:/Users/Tamrakar/Desktop/Finale.apk

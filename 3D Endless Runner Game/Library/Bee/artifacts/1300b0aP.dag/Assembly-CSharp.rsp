@@ -310,7 +310,7 @@
 "Assets/Scripts/Obstacle.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovement.cs"
-"Assets/Scripts/RightSideSpawner.cs"
+"Assets/Scripts/RightSideSpawner1.cs"
 -langversion:9.0
 
 /deterministic

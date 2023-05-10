@@ -4,24 +4,38 @@ using UnityEngine;
 
 public class LeftSideSpawner : MonoBehaviour
 {
-   public GameObject leftSidePlane;
-    Vector3 nextSpawnPnt;
+    
+    public GameObject stupa;
+    int spawnObjectEveryNTiles = 15;
+    int tilesCount = 0;
+
+    GroundSpawner groundSpawner; 
 
     void Start()
     {
-        for(int i = 0; i < 10; i++)
-        {
-            SpawnLeftTile();
-        }
-      
+        groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
+        tilesCount = groundSpawner.GetTilesSpawnedCount();
+        SpawnStupa();
     }
 
-    public void SpawnLeftTile()
+    public void SpawnStupa()
     {
-        GameObject temp = Instantiate(leftSidePlane, nextSpawnPnt, Quaternion.identity);
-        nextSpawnPnt = temp.transform.GetChild(1).transform.position;
+        int obstacleSpawnIndex = 2;
+        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        if (tilesCount == 0)
+        {
+            Instantiate(stupa, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
+            tilesCount++;
+            return;
+        }
+        if ((tilesCount - 1) % spawnObjectEveryNTiles == 0)
+        {
+            Instantiate(stupa, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
+        }
+        tilesCount++;
+
     }
- 
+    
     // Update is called once per frame
     void Update()
     {
