@@ -50,7 +50,7 @@ public class LeftSideSpawner : MonoBehaviour
         }
         if ((tilesCount - 1) % spawnObjectEveryNTiles == 0)
         {
-            Instantiate(rath, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
+            Instantiate(rath, spawnPoint.position + new Vector3(-6.6f, 1, 0), Quaternion.Euler(0, 0, -90), transform);
         }
         tilesCount++;
     }

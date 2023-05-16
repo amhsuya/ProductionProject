@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8616592847228525205}
   - component: {fileID: 4628453708176643376}
   - component: {fileID: 7484812526109434362}
-  - component: {fileID: -5880861785635940188}
   - component: {fileID: 4348274978477157850}
+  - component: {fileID: -8037266577337369231}
   m_Layer: 0
   m_Name: miniStupa
   m_TagString: Untagged
@@ -85,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &-5880861785635940188
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8998078969593593903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0.06460666, y: -8.864702, z: -0.31325957}
 --- !u!114 &4348274978477157850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +97,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8b351bd74062f409f981ddd155dcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeadlyJump: 1
+--- !u!136 &-8037266577337369231
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998078969593593903}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 0.2127426
+  m_Direction: 1
+  m_Center: {x: 0, y: -3, z: 0}

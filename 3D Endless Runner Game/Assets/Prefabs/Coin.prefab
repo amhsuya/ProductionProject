@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 90
+  coinSound: {fileID: 8300000, guid: 54bc15c6d5123b54e8db034245997201, type: 3}
 --- !u!54 &7350469940639266547
 Rigidbody:
   m_ObjectHideFlags: 0

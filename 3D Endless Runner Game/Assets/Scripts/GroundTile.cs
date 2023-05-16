@@ -9,8 +9,14 @@ public class GroundTile : MonoBehaviour
     public GameObject obstaclePrefab1;
     public GameObject obstaclePrefab2;
 
+    public GameObject powerUpPrefab;
+
     public GameObject leftTile;
-   public GameObject rightTile;
+    public GameObject rightTile;
+
+  
+
+ 
 
 
     // Start is called before the first frame update
@@ -21,6 +27,7 @@ public class GroundTile : MonoBehaviour
     
         SpawnObstacle();
         SpawnCoins();
+        SpawnPowerUp();
 
     }
 
@@ -33,21 +40,33 @@ public class GroundTile : MonoBehaviour
         Destroy(gameObject, 2);
         
     }
+    private void SpawnPowerUp()
+    {
+        int powerUpSpawnIndex = Random.Range(2, 5);
+        Transform spawnPoint = transform.GetChild(powerUpSpawnIndex).transform;
+        bool spawnPowerUp = Random.Range(0, 30) == 0; 
+
+
+        if (spawnPowerUp)
+        {
+            bool spawnObstacleOnPowerUpSpot = spawnPoint.GetComponentInChildren<Obstacle>() != null;
+
+            if (!spawnObstacleOnPowerUpSpot)
+            {
+                Instantiate(powerUpPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
+            }
+        }
+    }
     // Update is called once per frame
     void Update()
     {
         
     }
+  
+
     void SpawnObstacle()
     {
-        // Choose random point to spawn the obstacle
-        //  int obstacleSpawnIndex = Random.Range(2, 5);
-        // Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        // Randomly select one of the two obstacle prefabs
-
-
-        //  Instantiate(obstaclePrefab1, spawnPoint.position, Quaternion.identity, transform);
-
+        
         int obstacleSpawnIndex1 = Random.Range(2, 5);
         int obstacleSpawnIndex2 = Random.Range(2, 5);
 
@@ -85,7 +104,7 @@ public class GroundTile : MonoBehaviour
    public GameObject coinPrefab;
     void SpawnCoins()
     {
-        int coinsToSpawn = 10;
+        int coinsToSpawn = 5;
         float[] laneXPositions = { -3.3f, 0f, 3.3f }; // Pre-defined x-axis positions for the lanes
         for (int i = 0; i < coinsToSpawn; i++)
         {

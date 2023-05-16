@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     //speed of coin rotating
     public float turnSpeed = 90f;
+    public AudioClip coinSound;
 
     /// <summary>
     /// If player collides with coin then score is incremented
@@ -24,9 +25,9 @@ public class Coin : MonoBehaviour
         {
             return;
         }
-
+        AudioSource.PlayClipAtPoint(coinSound, transform.position, 1);
         GameManager.instance.IncrementScore();
-       
+
         Destroy(gameObject);
     }
     // Start is called before the first frame update

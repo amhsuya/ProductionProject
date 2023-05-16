@@ -1201,7 +1201,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 165790263e5e56f4c8bea89d5c64befb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.01
+  m_Volume: 0.08
   m_Pitch: 1.3
   Loop: 0
   Mute: 0
@@ -2018,6 +2018,7 @@ MonoBehaviour:
   currentLane: 0
   jumpForce: 500
   increaseSpeed: 0.5
+  jumpSound: {fileID: 8300000, guid: 912f6175a12922d4e935e78ec6173b4b, type: 3}
 --- !u!64 &2001210496
 MeshCollider:
   m_ObjectHideFlags: 0

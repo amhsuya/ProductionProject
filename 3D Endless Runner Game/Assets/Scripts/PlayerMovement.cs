@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float increaseSpeed = 0.5f;
 
+    public AudioClip jumpSound;
+
     /// <summary>
     /// Components are initialized 
     /// Called by engine automatically at the beginning
@@ -119,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
                     //rgbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isJumping = true;
                     isSwiping = false;
+                    AudioSource.PlayClipAtPoint(jumpSound, transform.position, 0.3f);
                 }
             }
             else if (touch.phase == TouchPhase.Ended)

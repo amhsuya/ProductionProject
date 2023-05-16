@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     PlayerMovement playerMovement;
+    public bool isDeadlyJump = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +18,18 @@ public class Obstacle : MonoBehaviour
         {
             playerMovement.Die();
         }
+      
     }
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isDeadlyJump == true && other.gameObject.name == "Player")
+        {
+            playerMovement.Die();
+        }
     }
 }

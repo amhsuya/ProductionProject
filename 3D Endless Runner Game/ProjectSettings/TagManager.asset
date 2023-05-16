@@ -6,6 +6,8 @@ TagManager:
   tags:
   - obstacle
   - NextLeftSide
+  - CoinDetector
+  - PlayerBubble
   layers:
   - Default
   - TransparentFX
