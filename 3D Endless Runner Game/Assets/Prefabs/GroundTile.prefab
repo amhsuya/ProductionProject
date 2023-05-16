@@ -63,7 +63,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e17722f8ba86c419ad3cdd5fcc3235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 1797998187107785108, guid: 2655aad15fb680f41ad1ce8ba89436dc, type: 3}
+  obstaclePrefab1: {fileID: 1797998187107785108, guid: 2655aad15fb680f41ad1ce8ba89436dc, type: 3}
+  obstaclePrefab2: {fileID: 8998078969593593903, guid: aa786adc5bdf22a4192c764aecf3b912, type: 3}
   leftTile: {fileID: 0}
   rightTile: {fileID: 0}
   coinPrefab: {fileID: 3613106796886090244, guid: 518932c14b2708d44ba812745e7eefba, type: 3}

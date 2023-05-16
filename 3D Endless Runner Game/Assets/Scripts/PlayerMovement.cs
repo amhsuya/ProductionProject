@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public float horizontalMultiplier = 3f;
+    public float horizontalMultiplier = 3.3f;
 
     public Rigidbody rgbody;
    
