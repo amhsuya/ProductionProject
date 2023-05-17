@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8b351bd74062f409f981ddd155dcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDeadlyJump: 0
+  dieSound: {fileID: 8300000, guid: fef00d0c53e865a40abee2272b954b5d, type: 3}
 --- !u!1 &8685164666163655814
 GameObject:
   m_ObjectHideFlags: 0

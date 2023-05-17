@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Start()
     {
+      
         currentLane = 0; // start in a random lane
         rgbody = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -20f, 0);
@@ -144,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
         speed += increaseSpeed * Time.deltaTime;
+      
 
         if (hasMagnet)
         {
@@ -193,7 +195,10 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-
+    public float GetSpeed()
+    {
+        return speed;
+    }
     public void ActivateMagnet()
     {
         hasMagnet = true;

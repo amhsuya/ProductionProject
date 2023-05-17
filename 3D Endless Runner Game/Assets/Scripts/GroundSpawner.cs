@@ -41,7 +41,7 @@ public class GroundSpawner : MonoBehaviour
         GameObject newLeftTile = Instantiate(leftSpawnPoint, nextLeftSpawnPoint, Quaternion.identity);
         nextLeftSpawnPoint = newLeftTile.transform.GetChild(1).transform.position;
 
-          GameObject newRightTile = Instantiate(rightSpawnPoint, nextRightSpawnPoint, Quaternion.identity);
+        GameObject newRightTile = Instantiate(rightSpawnPoint, nextRightSpawnPoint, Quaternion.identity);
         nextRightSpawnPoint = newRightTile.transform.GetChild(1).transform.position;
 
         GroundTile ground = newTile.GetComponent<GroundTile>();

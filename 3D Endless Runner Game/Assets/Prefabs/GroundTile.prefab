@@ -68,9 +68,6 @@ MonoBehaviour:
   powerUpPrefab: {fileID: 836893763575419918, guid: 73465e76f64801147b58677612f60a24, type: 3}
   leftTile: {fileID: 0}
   rightTile: {fileID: 0}
-  player: {fileID: 919132149155446097, guid: e413a389eec99de489111222ba8a671d, type: 3}
-  magnetRadius: 5
-  powerUpDuration: 5
   coinPrefab: {fileID: 3613106796886090244, guid: 518932c14b2708d44ba812745e7eefba, type: 3}
 --- !u!1 &2161839350395606690
 GameObject:
