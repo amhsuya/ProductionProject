@@ -26,6 +26,14 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioClip jumpSound;
 
+
+    public bool hasMagnet = false;
+    public float magnetDuration = 10f;
+    private float magnetTimer = 0f;
+    public float magnetRadius = 25f;
+
+    public AudioClip coinSound;
+
     /// <summary>
     /// Components are initialized 
     /// Called by engine automatically at the beginning
@@ -136,7 +144,34 @@ public class PlayerMovement : MonoBehaviour
 
         }
         speed += increaseSpeed * Time.deltaTime;
-       
+
+        if (hasMagnet)
+        {
+            magnetTimer -= Time.deltaTime;
+            if (magnetTimer <= 0)
+            {
+                DeactivateMagnet();
+            }
+            else
+            {
+                Collider[] nearbyColliders = Physics.OverlapSphere(transform.position, magnetRadius);
+                foreach (Collider collider in nearbyColliders)
+                {
+                    if (collider.CompareTag("Coin"))
+                    {
+                       // AudioSource.PlayClipAtPoint(coinSound, transform.position, 1);
+                        //GameManager.instance.IncrementScore();
+                        //Destroy(collider.gameObject);
+                        Coin coin = collider.GetComponent<Coin>();
+                        if (coin != null)
+                        {
+                            coin.isAttracted = true;
+                        }
+                    }
+                }
+            }
+        }
+
     }
     /// <summary>
     /// Character dies and resets gravity and restart game after a second
@@ -157,4 +192,20 @@ public class PlayerMovement : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+
+    public void ActivateMagnet()
+    {
+        hasMagnet = true;
+        magnetTimer = magnetDuration;
+        // Add any additional effects when the magnet is activated (e.g., visual effects)
+    }
+
+    public void DeactivateMagnet()
+    {
+        hasMagnet = false;
+        magnetTimer = 0f;
+        // Add any additional effects when the magnet is deactivated (e.g., visual effects)
+    }
+
 }

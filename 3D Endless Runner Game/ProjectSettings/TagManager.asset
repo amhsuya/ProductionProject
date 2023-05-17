@@ -8,6 +8,8 @@ TagManager:
   - NextLeftSide
   - CoinDetector
   - PlayerBubble
+  - Coin
+  - Power
   layers:
   - Default
   - TransparentFX

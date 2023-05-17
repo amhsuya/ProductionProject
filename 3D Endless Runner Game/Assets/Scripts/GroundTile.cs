@@ -15,10 +15,6 @@ public class GroundTile : MonoBehaviour
     public GameObject rightTile;
 
   
-
- 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +50,7 @@ public class GroundTile : MonoBehaviour
             if (!spawnObstacleOnPowerUpSpot)
             {
                 Instantiate(powerUpPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
+                
             }
         }
     }
