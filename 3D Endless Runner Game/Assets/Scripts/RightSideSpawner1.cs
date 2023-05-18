@@ -5,59 +5,66 @@ using UnityEngine;
 public class RightSideSpawner1 : MonoBehaviour
 {
 
-    public GameObject dharahara;
-    public GameObject nyatapola;
+    public GameObject dharaharaPrefab;
+    public GameObject nyatapolaPrefab;
 
     int spawnObjectEveryNTiles = 15;
-    int spawnNyatapolaEveryNTiles = 17;
+   
 
     int tilesCount = 0;
 
-    private PlayerMovement playerMovement;
+   
     int dharaharaSpawnDistance = 15;
-    int nyatapolaSpawnDistance = 17;
+    private bool spawnDharahara = true;
 
     GroundSpawner groundSpawner;
+
+    private GameObject currentObstacle;
+
+
     // Start is called before the first frame update
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-        playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
-
        
-        SpawnDharahara();
-        SpawnNyatapola();
-    }
-
-   
-    public void SpawnDharahara()
-    {
-        int obstacleSpawnx = 2;
-        Transform spawnRight = transform.GetChild(obstacleSpawnx).transform;
         tilesCount = groundSpawner.GetTilesSpawnedCount();
-        float adjustedDharaharaSpawnDistance = dharaharaSpawnDistance * playerMovement.GetSpeed();
-
-        if (tilesCount >= adjustedDharaharaSpawnDistance && (tilesCount - adjustedDharaharaSpawnDistance) % spawnObjectEveryNTiles == 0)
-        {
-            int spawnTileIndex = (int)(tilesCount - adjustedDharaharaSpawnDistance) / spawnObjectEveryNTiles;
-            Vector3 dharaharaPosition = spawnRight.position + new Vector3(0, 1, spawnTileIndex * 1);
-            Instantiate(dharahara, dharaharaPosition + new Vector3(0, 0, 15 * 1), Quaternion.identity, transform);
-        }
+        SpawnRightSideScene();        
 
     }
-    public void SpawnNyatapola()
+  
+
+    public void SpawnRightSideScene()
     {
-
-        int obstacleSpawnx = 3;
-        Transform spawnRight = transform.GetChild(obstacleSpawnx).transform;
-        tilesCount = groundSpawner.GetTilesSpawnedCount();
-        float adjustedNyatapolaSpawnDistance = nyatapolaSpawnDistance * playerMovement.GetSpeed();
-
-        if (tilesCount >= adjustedNyatapolaSpawnDistance && (tilesCount - adjustedNyatapolaSpawnDistance) % spawnNyatapolaEveryNTiles == 0)
+        if (tilesCount > 0 && tilesCount % spawnObjectEveryNTiles == 0)
         {
-            int spawnTileIndex = (int)(tilesCount - adjustedNyatapolaSpawnDistance) / spawnNyatapolaEveryNTiles;
-            Vector3 nyatapolaPosition = spawnRight.position + new Vector3(0, 1, spawnTileIndex * 1);
-            Instantiate(nyatapola, nyatapolaPosition + new Vector3(0, 15, 17 * 1), Quaternion.identity, transform);
+            if (currentObstacle != null)
+            {
+                Destroy(currentObstacle);
+             
+            }
+            int obstacleSpawnIndex = (tilesCount / spawnObjectEveryNTiles) % 2; // Alternates between 0 and 1
+            Transform spawnRight = transform.GetChild(obstacleSpawnIndex + 2).transform;
+            if (obstacleSpawnIndex == 0)
+            {
+                currentObstacle = Instantiate(dharaharaPrefab, spawnRight.position + new Vector3(0,1,0), Quaternion.identity, transform);
+            }
+            else
+            {
+                currentObstacle = Instantiate(nyatapolaPrefab, spawnRight.position + new Vector3(1, 10, 1), Quaternion.identity, transform);
+            }
+
+            currentObstacle.transform.parent = spawnRight;
+           
+
+            spawnDharahara = !spawnDharahara;
         }
+
+        tilesCount++;
+
+    }
+
+    public void ResetTilesCount()
+    {
+        tilesCount = 0;
     }
 }

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text highScoreText;
 
+    private RightSideSpawner1 rightSideSpawner;
+
     private const string HighScoreKey = "highscore";
 
     public void IncrementScore()
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
         highScore = PlayerPrefs.GetInt(HighScoreKey, 0);
         highScoreText.text = "HIGHSCORE: " + highScore.ToString();
 
+        rightSideSpawner = GameObject.FindObjectOfType<RightSideSpawner1>();
     }
 
     // Update is called once per frame
@@ -46,5 +49,14 @@ public class GameManager : MonoBehaviour
     {
         
     }
-  
+    private void OnDisable()
+    {
+        PlayerPrefs.Save();
+    }
+
+    public void RestartGame()
+    {
+        
+        rightSideSpawner.ResetTilesCount(); // Call ResetTilesCount() when restarting the game
+    }
 }

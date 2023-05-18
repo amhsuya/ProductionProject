@@ -1271,7 +1271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &719766898
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1284,7 +1284,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 165790263e5e56f4c8bea89d5c64befb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.019
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1798,7 +1798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 1050}
+  m_AnchoredPosition: {x: 400, y: 1000}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642232753
@@ -2106,6 +2106,7 @@ MonoBehaviour:
   magnetDuration: 10
   magnetRadius: 5
   coinSound: {fileID: 8300000, guid: 54bc15c6d5123b54e8db034245997201, type: 3}
+  mainCamera: {fileID: 963194228}
 --- !u!64 &2001210496
 MeshCollider:
   m_ObjectHideFlags: 0

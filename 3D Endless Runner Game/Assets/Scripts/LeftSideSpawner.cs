@@ -6,20 +6,26 @@ public class LeftSideSpawner : MonoBehaviour
 {
     
     public GameObject stupa;
-    int spawnObjectEveryNTiles = 15;
+    int spawnObjectEveryNTiles = 23;
     int tilesCount = 0;
 
     public GameObject rath;
 
-    GroundSpawner groundSpawner; 
+    private bool spawnDharahara = true;
+
+    GroundSpawner groundSpawner;
+
+    private GameObject currentObstacle;
 
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         tilesCount = groundSpawner.GetTilesSpawnedCount();
-        SpawnStupa();
+        
         SpawnRath();
+        SpawnStupa();
     }
+
 
     public void SpawnStupa()
     {
@@ -54,6 +60,11 @@ public class LeftSideSpawner : MonoBehaviour
         }
         tilesCount++;
     }
+    public void ResetTilesCount()
+    {
+        tilesCount = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {

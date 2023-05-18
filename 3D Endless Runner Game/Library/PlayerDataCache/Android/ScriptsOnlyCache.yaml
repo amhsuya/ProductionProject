@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackgroundMusic
     - CameraFollow
     - Coin
     - GameManager
@@ -11,7 +12,9 @@ ScriptsOnlyBuild:
     - Obstacle
     - PauseMenu
     - PlayerMovement
+    - PowerUp
     - RightSideSpawner1
+    - SoundManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -77,6 +80,9 @@ ScriptsOnlyBuild:
     fullTypeName: MainMenu
     methodName: QuitGame
   - assembly: Assembly-CSharp
+    fullTypeName: SoundManager
+    methodName: OnButtonPress
+  - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: Continue
   - assembly: Assembly-CSharp
@@ -106,6 +112,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -115,31 +125,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 2154}
+      Script: {instanceID: 2156}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 4038}
+      Script: {instanceID: 4040}
     - Class: 114
-      Script: {instanceID: 4288}
+      Script: {instanceID: 4290}
     - Class: 114
-      Script: {instanceID: 4976}
+      Script: {instanceID: 4980}
     - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 5662}
+      Script: {instanceID: 5666}
     - Class: 114
-      Script: {instanceID: 5980}
+      Script: {instanceID: 5984}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 6386}
     - Class: 114
-      Script: {instanceID: 6860}
+      Script: {instanceID: 6864}
+    - Class: 114
+      Script: {instanceID: 28924}
+    - Class: 114
+      Script: {instanceID: 30064}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,46 +218,50 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 1766}
+      Script: {instanceID: 1768}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3376}
     - Class: 114
-      Script: {instanceID: 3626}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 4032}
+      Script: {instanceID: 4034}
     - Class: 114
-      Script: {instanceID: 4206}
+      Script: {instanceID: 4208}
     - Class: 114
-      Script: {instanceID: 4872}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 4976}
+      Script: {instanceID: 4898}
     - Class: 114
-      Script: {instanceID: 5220}
+      Script: {instanceID: 4980}
     - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5224}
     - Class: 114
-      Script: {instanceID: 5662}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 5980}
+      Script: {instanceID: 5666}
     - Class: 114
-      Script: {instanceID: 6382}
+      Script: {instanceID: 5984}
     - Class: 114
-      Script: {instanceID: 6504}
+      Script: {instanceID: 6386}
     - Class: 114
-      Script: {instanceID: 6970}
+      Script: {instanceID: 6508}
     - Class: 114
-      Script: {instanceID: 7194}
+      Script: {instanceID: 6974}
     - Class: 114
-      Script: {instanceID: 7592}
+      Script: {instanceID: 7198}
+    - Class: 114
+      Script: {instanceID: 7596}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 122
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -282,6 +300,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: ff06207bcd3dd0ec70008e30677713f7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReplayMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -326,7 +350,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9a87526c894d9fc2052bb3c97658fbd7
+      Hash: de687c650fc2e24f3f52f5d0d9ef3d26
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -578,7 +602,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9e69df063c8aea1bfb48303c6935a6d8
+      Hash: b2302f1e44dfb2983ddd659e0022b5bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -650,7 +674,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5ffce8394dd09f263bda53643e48c7dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Obstacle
@@ -758,7 +782,7 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 62cef9f13a042d4008a8138dfdef088a
+      Hash: cc49bb529175308134b40a78470da81f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Coin
@@ -768,6 +792,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: GlobalMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PowerUp
   - hash:
       serializedVersion: 2
       Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
@@ -1034,7 +1064,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: af76b8b2a02b05fe1a73edd44d79889e
+      Hash: 0fc168f22725df701a831b288a5dc89f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RightSideSpawner1
@@ -1082,7 +1112,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 40e7c268af83916c45ff98ebac8e4f63
+      Hash: 8c872d304bee01cae21a457c101353fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GroundTile
@@ -1110,8 +1140,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgroundMusic
+  - hash:
+      serializedVersion: 2
+      Hash: 0b2df6495d5441ebea67da8b80bca680
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/paryatak.apk
+  playerPath: C:/Users/Tamrakar/Desktop/NewlyDone.apk

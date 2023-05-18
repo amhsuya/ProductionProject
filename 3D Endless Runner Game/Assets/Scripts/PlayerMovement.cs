@@ -1,4 +1,4 @@
-
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -161,9 +161,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (collider.CompareTag("Coin"))
                     {
-                       // AudioSource.PlayClipAtPoint(coinSound, transform.position, 1);
-                        //GameManager.instance.IncrementScore();
-                        //Destroy(collider.gameObject);
+                       
                         Coin coin = collider.GetComponent<Coin>();
                         if (coin != null)
                         {
@@ -178,14 +176,48 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Character dies and resets gravity and restart game after a second
     /// </summary>
+    /// 
+    public Transform mainCamera;
     public void Die()
     {
         alive = false;
+
+        Quaternion targetRotation = Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, 0f);
+        StartCoroutine(RotatePlayer(targetRotation, 5f)); // Adjust the rotation speed as needed     
+        
+        StartCoroutine(MoveCameraBack(2, 1));
+
         rgbody.constraints = RigidbodyConstraints.None;
         Invoke("Restart", 1);
         Physics.gravity = new Vector3(0, -9.81f, 0);
 
     }
+    IEnumerator MoveCameraBack(float distance, float duration)
+    {
+        Vector3 originalPosition = mainCamera.position;
+        Vector3 targetPosition = originalPosition - mainCamera.forward * distance;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            mainCamera.position = Vector3.Lerp(originalPosition, targetPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        mainCamera.position = targetPosition;
+    }
+
+    IEnumerator RotatePlayer(Quaternion targetRotation, float rotationSpeed)
+    {
+        // Rotate the player gradually
+        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
     /// <summary>
     /// Loads a new scene where
     /// Game objects and variable are reset to their initial state after player has lost
