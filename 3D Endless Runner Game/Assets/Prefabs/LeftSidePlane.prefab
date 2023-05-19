@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1387676062326124449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -25, y: 15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2392136257589683321}
@@ -111,8 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b533bd276608de499a01cf15e8a8db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stupa: {fileID: 4505832616150434121, guid: 91104f9e863d6884784de42424e9f275, type: 3}
-  rath: {fileID: 2974368841565107705, guid: 53c95a1e80864674eadc81a1d6830f6b, type: 3}
+  stupaPrefab: {fileID: 5629970461000817626, guid: f5d380df1a2d3fb479a80cbbe5b4586b, type: 3}
+  rathPrefab: {fileID: 2974368841565107705, guid: 53c95a1e80864674eadc81a1d6830f6b, type: 3}
+  initialPoolSize: 5
 --- !u!1 &6780106632161453672
 GameObject:
   m_ObjectHideFlags: 0

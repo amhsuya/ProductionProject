@@ -15,8 +15,7 @@ public class RightSideSpawner1 : MonoBehaviour
 
    
     int dharaharaSpawnDistance = 15;
-    private bool spawnDharahara = true;
-
+   
     GroundSpawner groundSpawner;
 
     private GameObject currentObstacle;
@@ -26,7 +25,9 @@ public class RightSideSpawner1 : MonoBehaviour
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
-       
+
+        ResetTilesCount();
+
         tilesCount = groundSpawner.GetTilesSpawnedCount();
         SpawnRightSideScene();        
 
@@ -35,7 +36,7 @@ public class RightSideSpawner1 : MonoBehaviour
 
     public void SpawnRightSideScene()
     {
-        if (tilesCount > 0 && tilesCount % spawnObjectEveryNTiles == 0)
+        if (tilesCount % spawnObjectEveryNTiles == 0)
         {
             if (currentObstacle != null)
             {
@@ -55,9 +56,7 @@ public class RightSideSpawner1 : MonoBehaviour
 
             currentObstacle.transform.parent = spawnRight;
            
-
-            spawnDharahara = !spawnDharahara;
-        }
+         }
 
         tilesCount++;
 
@@ -66,5 +65,15 @@ public class RightSideSpawner1 : MonoBehaviour
     public void ResetTilesCount()
     {
         tilesCount = 0;
+    }
+    public void RestartGame()
+    {
+        if (currentObstacle != null)
+        {
+            Destroy(currentObstacle);
+        }
+
+        ResetTilesCount();
+        SpawnRightSideScene();
     }
 }

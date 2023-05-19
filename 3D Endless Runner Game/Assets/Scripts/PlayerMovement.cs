@@ -32,6 +32,16 @@ public class PlayerMovement : MonoBehaviour
     private float magnetTimer = 0f;
     public float magnetRadius = 25f;
 
+    private bool rotatingPlayer = false;
+    private bool movingCamera = false;
+    private Quaternion targetRotation;
+    private Vector3 originalCameraPosition;
+    private Vector3 targetCameraPosition;
+    private float rotationSpeed = 5f;
+    private float cameraMoveDistance = 2f;
+    private float cameraMoveDuration = 1f;
+
+
     public AudioClip coinSound;
 
     /// <summary>
@@ -172,6 +182,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if (rotatingPlayer)
+        {
+            RotatePlayer();
+        }      
+
     }
     /// <summary>
     /// Character dies and resets gravity and restart game after a second
@@ -182,40 +197,40 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
 
-        Quaternion targetRotation = Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, 0f);
-        StartCoroutine(RotatePlayer(targetRotation, 5f)); // Adjust the rotation speed as needed     
-        
-        StartCoroutine(MoveCameraBack(2, 1));
+        targetRotation = Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, 0f);
+        rotatingPlayer = true;
+        movingCamera = true;
 
         rgbody.constraints = RigidbodyConstraints.None;
         Invoke("Restart", 1);
         Physics.gravity = new Vector3(0, -9.81f, 0);
 
+        StartCoroutine(MoveCameraBack(cameraMoveDistance, cameraMoveDuration));
+
     }
+    private void RotatePlayer()
+    {
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        if (Quaternion.Angle(transform.rotation, targetRotation) <= 0.01f)
+        {
+            rotatingPlayer = false;
+        }
+    }
+
     IEnumerator MoveCameraBack(float distance, float duration)
     {
-        Vector3 originalPosition = mainCamera.position;
-        Vector3 targetPosition = originalPosition - mainCamera.forward * distance;
+        originalCameraPosition = mainCamera.position;
+        targetCameraPosition = originalCameraPosition - Vector3.up * distance;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            mainCamera.position = Vector3.Lerp(originalPosition, targetPosition, elapsedTime / duration);
+            mainCamera.position = Vector3.Lerp(originalCameraPosition, targetCameraPosition, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        mainCamera.position = targetPosition;
-    }
-
-    IEnumerator RotatePlayer(Quaternion targetRotation, float rotationSpeed)
-    {
-        // Rotate the player gradually
-        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            yield return null;
-        }
+        mainCamera.position = targetCameraPosition;
     }
 
     /// <summary>

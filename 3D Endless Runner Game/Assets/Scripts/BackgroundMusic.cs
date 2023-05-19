@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundMusic : MonoBehaviour
 {
     private static BackgroundMusic backgroundMusic;
-    
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -18,5 +18,8 @@ public class BackgroundMusic : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
     }
 }

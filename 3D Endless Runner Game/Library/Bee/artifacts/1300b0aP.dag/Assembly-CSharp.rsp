@@ -312,7 +312,6 @@
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PowerUp.cs"
-"Assets/Scripts/ReplayMenu.cs"
 "Assets/Scripts/RightSideSpawner1.cs"
 "Assets/Scripts/SoundManager.cs"
 -langversion:9.0

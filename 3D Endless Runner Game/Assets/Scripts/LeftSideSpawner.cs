@@ -4,70 +4,123 @@ using UnityEngine;
 
 public class LeftSideSpawner : MonoBehaviour
 {
-    
-    public GameObject stupa;
-    int spawnObjectEveryNTiles = 23;
-    int tilesCount = 0;
+    public GameObject stupaPrefab;
+    public GameObject rathPrefab;
+    public int initialPoolSize = 5;
 
-    public GameObject rath;
+    private List<GameObject> stupaPool;
+    private List<GameObject> rathPool;
 
-    private bool spawnDharahara = true;
+    private int spawnObjectEveryNTiles = 15;
+    private int tilesCount = 0;
 
-    GroundSpawner groundSpawner;
-
-    private GameObject currentObstacle;
+    private GroundSpawner groundSpawner;
+    private Transform[] obstacleSpawnPoints;
 
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
         tilesCount = groundSpawner.GetTilesSpawnedCount();
-        
-        SpawnRath();
+        obstacleSpawnPoints = new Transform[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            obstacleSpawnPoints[i] = transform.GetChild(i);
+        }
+
+        InitializeObjectPool();
         SpawnStupa();
+        SpawnRath();
     }
 
+    private void InitializeObjectPool()
+    {
+        stupaPool = new List<GameObject>();
+        rathPool = new List<GameObject>();
+
+        for (int i = 0; i < initialPoolSize; i++)
+        {
+            GameObject stupa = Instantiate(stupaPrefab, Vector3.zero, Quaternion.identity, transform);
+            GameObject rath = Instantiate(rathPrefab, Vector3.zero, Quaternion.identity, transform);
+
+            stupa.SetActive(false);
+            rath.SetActive(false);
+
+            stupaPool.Add(stupa);
+            rathPool.Add(rath);
+        }
+    }
 
     public void SpawnStupa()
     {
         int obstacleSpawnIndex = 2;
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        if (tilesCount == 0)
-        {
-            Instantiate(stupa, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
-            tilesCount++;
-            return;
-        }
-        if ((tilesCount - 1) % spawnObjectEveryNTiles == 0)
-        {
-            Instantiate(stupa, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
-        }
-        tilesCount++;
+        Transform spawnPoint = obstacleSpawnPoints[obstacleSpawnIndex];
 
+        if (tilesCount % spawnObjectEveryNTiles == 0)
+        {
+            GameObject stupa = GetPooledObject(stupaPool);
+
+            if (stupa != null)
+            {
+                stupa.transform.position = spawnPoint.position + new Vector3(0, 1, 0);
+                stupa.SetActive(true);
+            }
+        }
+
+        tilesCount++;
     }
+
     public void SpawnRath()
     {
         int obstacleSpawnIndex = 4;
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
-        if (tilesCount == 0)
+        Transform spawnPoint = obstacleSpawnPoints[obstacleSpawnIndex];
+
+        if (tilesCount % spawnObjectEveryNTiles == 0)
         {
-            Instantiate(rath, spawnPoint.position + new Vector3(0, 1, 0), Quaternion.identity, transform);
-            tilesCount++;
-            return;
+            GameObject rath = GetPooledObject(rathPool);
+
+            if (rath != null)
+            {
+                rath.transform.position = spawnPoint.position + new Vector3(-6.6f, 1, 0);
+                rath.transform.rotation = Quaternion.Euler(0, 0, -90);
+                rath.SetActive(true);
+            }
         }
-        if ((tilesCount - 1) % spawnObjectEveryNTiles == 0)
-        {
-            Instantiate(rath, spawnPoint.position + new Vector3(-6.6f, 1, 0), Quaternion.Euler(0, 0, -90), transform);
-        }
+
         tilesCount++;
     }
-    public void ResetTilesCount()
+
+    private GameObject GetPooledObject(List<GameObject> pool)
     {
-        tilesCount = 0;
+        foreach (GameObject obj in pool)
+        {
+            if (!obj.activeInHierarchy)
+            {
+                return obj;
+            }
+        }
+
+        // If no inactive objects are found, create a new one
+        GameObject newObj = Instantiate(stupaPrefab, Vector3.zero, Quaternion.identity, transform);
+        pool.Add(newObj);
+
+        return newObj;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RestartGame()
     {
-        
+        foreach (GameObject stupa in stupaPool)
+        {
+            stupa.SetActive(false);
+        }
+
+        foreach (GameObject rath in rathPool)
+        {
+            rath.SetActive(false);
+        }
+
+        tilesCount = 0;
+
+        SpawnStupa();
+        SpawnRath();
     }
 }

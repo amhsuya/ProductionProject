@@ -14,14 +14,28 @@ public class GroundTile : MonoBehaviour
     public GameObject leftTile;
     public GameObject rightTile;
 
-  
+    private Transform tileTransform;
+
+    public GameObject coinPrefab;
+    private List<GameObject> coinPool = new List<GameObject>();
+    private int coinsToSpawn = 5;
+
     // Start is called before the first frame update
     void Start()
     {
         groundSpawner = GameObject.FindObjectOfType<GroundSpawner>();
- 
-    
+
+        tileTransform = transform;
+
         SpawnObstacle();
+
+        for (int i = 0; i < coinsToSpawn; i++)
+        {
+            GameObject coin = Instantiate(coinPrefab, transform);
+            coin.SetActive(false);
+            coinPool.Add(coin);
+        }
+
         SpawnCoins();
         SpawnPowerUp();
 
@@ -40,7 +54,7 @@ public class GroundTile : MonoBehaviour
     {
         int powerUpSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(powerUpSpawnIndex).transform;
-        bool spawnPowerUp = Random.Range(0, 30) == 0; 
+        bool spawnPowerUp = Random.Range(0, 60) == 0; 
 
 
         if (spawnPowerUp)
@@ -59,60 +73,58 @@ public class GroundTile : MonoBehaviour
     {
         
     }
-  
+
+
+    int maxObstaclesToSpawn = 1; // Adjust this value to set the maximum number of obstacles to spawn
 
     void SpawnObstacle()
     {
-        
-        int obstacleSpawnIndex1 = Random.Range(2, 5);
-        int obstacleSpawnIndex2 = Random.Range(2, 5);
+        int obstacleSpawnCount = 0;
 
-        while (obstacleSpawnIndex2 == obstacleSpawnIndex1)
+        while (obstacleSpawnCount < maxObstaclesToSpawn)
         {
-            obstacleSpawnIndex2 = Random.Range(2, 5);
-        }
+            int obstacleSpawnIndex = Random.Range(2, 5);
+            Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
-        Transform spawnPoint1 = transform.GetChild(obstacleSpawnIndex1).transform;
-        Transform spawnPoint2 = transform.GetChild(obstacleSpawnIndex2).transform;
-
-        bool spawnFirstObstacle = Random.Range(0, 2) == 0; // Randomly choose which obstacle to spawn first
-
-        // Spawn the first obstacle
-        if (spawnFirstObstacle)
-        {
             GameObject obstaclePrefab = Random.Range(0, 2) == 0 ? obstaclePrefab1 : obstaclePrefab2;
-            Vector3 spawnPosition = spawnPoint1.position;
+            Vector3 spawnPosition = spawnPoint.position;
             spawnPosition.y = obstaclePrefab.transform.position.y; // Set the correct y-position
-            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, spawnPoint1);
-        }
+            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, spawnPoint);
 
-        // Spawn the second obstacle
-        if (!spawnFirstObstacle)
-        {
-            GameObject obstaclePrefab = Random.Range(0, 2) == 0 ? obstaclePrefab1 : obstaclePrefab2;
-            Vector3 spawnPosition = spawnPoint2.position;
-            spawnPosition.y = obstaclePrefab.transform.position.y; // Set the correct y-position
-            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, spawnPoint2);
+            obstacleSpawnCount++;
         }
-
+    }
+    void InstantiateObstacle(GameObject prefab, Transform spawnPoint)
+    {
+        Vector3 spawnPosition = spawnPoint.position;
+        spawnPosition.y = prefab.transform.position.y; // Set the correct y-position
+        Instantiate(prefab, spawnPosition, Quaternion.identity, spawnPoint);
     }
 
-
-   public GameObject coinPrefab;
+   
     void SpawnCoins()
     {
-        int coinsToSpawn = 5;
-        float[] laneXPositions = { -3.3f, 0f, 3.3f }; // Pre-defined x-axis positions for the lanes
+        float[] laneXPositions = { -3.3f, 0f, 3.3f };
+
         for (int i = 0; i < coinsToSpawn; i++)
         {
-            GameObject temp = Instantiate(coinPrefab, transform);
-            Vector3 coinSpawnPoint = GetRandomPointInCollider(GetComponent<Collider>(), laneXPositions);
-           
-
-            temp.transform.position = coinSpawnPoint;
+            GameObject coin = GetPooledCoin();
+            coin.transform.position = GetRandomPointInCollider(GetComponent<Collider>(), laneXPositions);
+            coin.SetActive(true);
         }
     }
+    GameObject GetPooledCoin()
+    {
+        foreach (GameObject coin in coinPool)
+        {
+            if (!coin.activeInHierarchy)
+            {
+                return coin;
+            }
+        }
 
+        return null; // Handle the case when all coins are active
+    }
     Vector3 GetRandomPointInCollider(Collider collider,float[] laneXPositions)
     {
         float randomXPosition = laneXPositions[Random.Range(0, laneXPositions.Length)]; // Choose random x-axis position from the pre-defined lane positions
