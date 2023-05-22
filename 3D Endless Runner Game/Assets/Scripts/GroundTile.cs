@@ -68,18 +68,14 @@ public class GroundTile : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
-    int maxObstaclesToSpawn = 1; // Adjust this value to set the maximum number of obstacles to spawn
 
+    
     void SpawnObstacle()
     {
         int obstacleSpawnCount = 0;
+        int maxObstaclesToSpawn = 1;
 
         while (obstacleSpawnCount < maxObstaclesToSpawn)
         {
@@ -127,17 +123,20 @@ public class GroundTile : MonoBehaviour
     }
     Vector3 GetRandomPointInCollider(Collider collider,float[] laneXPositions)
     {
-        float randomXPosition = laneXPositions[Random.Range(0, laneXPositions.Length)]; // Choose random x-axis position from the pre-defined lane positions
-        Vector3 point = new Vector3(
-            randomXPosition,
-            Random.Range(collider.bounds.min.y, collider.bounds.max.y),
-            Random.Range(collider.bounds.min.z, collider.bounds.max.z)
-        );
-        if (point != collider.ClosestPoint(point))
+        Vector3 point;
+        float randomXPosition;
+
+        do
         {
-            point = GetRandomPointInCollider(collider, laneXPositions);
-        }
-        point.y = 0.5f; // Set the coin to spawn slightly above the ground
+            randomXPosition = laneXPositions[Random.Range(0, laneXPositions.Length)];
+            point = new Vector3(
+                randomXPosition,
+                Random.Range(collider.bounds.min.y, collider.bounds.max.y),
+                Random.Range(collider.bounds.min.z, collider.bounds.max.z)
+            );
+            point.y = 0.5f; // Set the coin to spawn slightly above the ground
+        } while (point != collider.ClosestPoint(point));
+
         return point;
     }
 

@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.A_t234.Runner"
+3    package="com.A_t234.YatraTravelNepal"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
 6    android:versionName="0.1" >
@@ -53,84 +53,86 @@
 31-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:24:9-33
 32
 33    <application
-33-->D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
+33-->D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-126
 34        android:extractNativeLibs="true"
 34-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:18-50
 35        android:icon="@mipmap/app_icon"
 35-->D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
-36        android:label="@string/app_name" >
+36        android:label="@string/app_name"
 36-->D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
-37        <activity
-37-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:27:9-47:20
-38            android:name="com.unity3d.player.UnityPlayerActivity"
-38-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:13-66
-39            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-39-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:13-194
-40            android:hardwareAccelerated="false"
-40-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:13-48
-41            android:launchMode="singleTask"
-41-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:13-44
-42            android:resizeableActivity="false"
-42-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-47
-43            android:screenOrientation="fullUser"
-43-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-49
-44            android:theme="@style/UnityThemeSelector" >
-44-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-54
-45            <intent-filter>
-45-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-39:29
-46                <action android:name="android.intent.action.MAIN" />
-46-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:17-69
-46-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:25-66
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-48-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:17-77
-48-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:27-74
-49            </intent-filter>
-50
-51            <meta-data
-51-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:13-43:40
-52                android:name="unityplayer.UnityActivity"
-52-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:17-57
-53                android:value="true" />
-53-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:43:17-37
-54            <meta-data
-54-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:13-46:40
-55                android:name="android.notch_support"
-55-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:17-53
-56                android:value="true" />
-56-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-37
-57        </activity>
-58
-59        <meta-data
-59-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:9-51:33
-60            android:name="unity.splash-mode"
-60-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:13-45
-61            android:value="0" />
-61-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:51:13-30
-62        <meta-data
-62-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:52:9-54:36
-63            android:name="unity.splash-enable"
-63-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:13-47
-64            android:value="True" />
-64-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-33
-65        <meta-data
-65-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:9-57:36
-66            android:name="unity.launch-fullscreen"
-66-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:13-51
-67            android:value="True" />
-67-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-33
-68        <meta-data
-68-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:9-60:37
-69            android:name="unity.allow-resizable-window"
-69-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-56
-70            android:value="False" />
-70-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-34
-71        <meta-data
-71-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:9-63:50
-72            android:name="notch.config"
-72-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:13-40
-73            android:value="portrait|landscape" />
-73-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-47
-74    </application>
-75
-76</manifest>
+37        android:roundIcon="@mipmap/app_icon_round" >
+37-->D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:81-123
+38        <activity
+38-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:27:9-47:20
+39            android:name="com.unity3d.player.UnityPlayerActivity"
+39-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:13-66
+40            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+40-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:29:13-194
+41            android:hardwareAccelerated="false"
+41-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:13-48
+42            android:launchMode="singleTask"
+42-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:13-44
+43            android:resizeableActivity="false"
+43-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-47
+44            android:screenOrientation="fullUser"
+44-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-49
+45            android:theme="@style/UnityThemeSelector" >
+45-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-54
+46            <intent-filter>
+46-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-39:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:17-69
+47-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:17-77
+49-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:27-74
+50            </intent-filter>
+51
+52            <meta-data
+52-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:41:13-43:40
+53                android:name="unityplayer.UnityActivity"
+53-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:17-57
+54                android:value="true" />
+54-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:43:17-37
+55            <meta-data
+55-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:44:13-46:40
+56                android:name="android.notch_support"
+56-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:17-53
+57                android:value="true" />
+57-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-37
+58        </activity>
+59
+60        <meta-data
+60-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:9-51:33
+61            android:name="unity.splash-mode"
+61-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:13-45
+62            android:value="0" />
+62-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:51:13-30
+63        <meta-data
+63-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:52:9-54:36
+64            android:name="unity.splash-enable"
+64-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:13-47
+65            android:value="True" />
+65-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-33
+66        <meta-data
+66-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:9-57:36
+67            android:name="unity.launch-fullscreen"
+67-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:13-51
+68            android:value="True" />
+68-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-33
+69        <meta-data
+69-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:9-60:37
+70            android:name="unity.allow-resizable-window"
+70-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:13-56
+71            android:value="False" />
+71-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-34
+72        <meta-data
+72-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:9-63:50
+73            android:name="notch.config"
+73-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:13-40
+74            android:value="portrait|landscape" />
+74-->[:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-47
+75    </application>
+76
+77</manifest>

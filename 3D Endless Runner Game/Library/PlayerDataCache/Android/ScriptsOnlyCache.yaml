@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CameraFollow
     - Coin
     - GameManager
+    - GateScript
     - GroundSpawner
     - GroundTile
     - LeftSideSpawner
@@ -256,7 +257,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7200}
     - Class: 114
-      Script: {instanceID: 7598}
+      Script: {instanceID: 7366}
+    - Class: 114
+      Script: {instanceID: 7600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 122
@@ -1098,6 +1101,12 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
+      Hash: 4dcd2ab8949bcca6824b881ae8540a9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GateScript
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1148,4 +1157,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/HimalayanTrekv1.apk
+  playerPath: C:/Users/Tamrakar/Desktop/YatraV2.apk

@@ -69,23 +69,28 @@
                 {
                     "source": "D:\\3D Endless Runner Game\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "2,2",
-                        "startOffsets": "55,98",
-                        "endColumns": "41,65",
-                        "endOffsets": "94,161"
+                        "startLines": "2,-1",
+                        "startColumns": "2,-1",
+                        "startOffsets": "55,-1",
+                        "endColumns": "54,-1",
+                        "endOffsets": "107,-1"
                     },
                     "to": {
                         "startLines": "8,9",
                         "startColumns": "4,4",
-                        "startOffsets": "356,400",
-                        "endColumns": "43,67",
-                        "endOffsets": "395,463"
+                        "startOffsets": "356,413",
+                        "endColumns": "56,67",
+                        "endOffsets": "408,476"
                     }
                 },
                 {
                     "source": "D:\\3D Endless Runner Game\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\unityLibrary\\build\\intermediates\\packaged_res\\release\\values\\values.xml",
                     "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
                         "startOffsets": "55,101,158,214,263,309",
@@ -96,20 +101,17 @@
                 {
                     "source": "D:\\3D Endless Runner Game\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "5,2,7",
-                        "startColumns": "0,0,0",
-                        "startOffsets": "190,53,288",
-                        "endLines": "6,4,10",
-                        "endColumns": "8,8,8",
-                        "endOffsets": "286,188,513"
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
                     },
                     "to": {
                         "startLines": "10,12,15",
                         "startColumns": "4,4,4",
-                        "startOffsets": "468,568,706",
+                        "startOffsets": "481,581,719",
                         "endLines": "11,14,18",
                         "endColumns": "8,8,8",
-                        "endOffsets": "563,701,928"
+                        "endOffsets": "576,714,941"
                     }
                 }
             ]

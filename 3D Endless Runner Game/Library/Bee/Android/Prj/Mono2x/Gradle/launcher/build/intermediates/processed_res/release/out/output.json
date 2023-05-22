@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.A_t234.Runner",
+  "applicationId": "com.A_t234.YatraTravelNepal",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -19,7 +19,7 @@
       },
       "path": "resources-release.ap_",
       "properties": {
-        "packageId": "com.A_t234.Runner",
+        "packageId": "com.A_t234.YatraTravelNepal",
         "split": "",
         "minSdkVersion": "22"
       }

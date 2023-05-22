@@ -10,6 +10,8 @@ TagManager:
   - PlayerBubble
   - Coin
   - Power
+  - Stupa
+  - Rath
   layers:
   - Default
   - TransparentFX

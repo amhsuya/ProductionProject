@@ -9,7 +9,7 @@ INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\la
 INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 	package
-		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-97
+		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-107
 		INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:versionName
@@ -17,7 +17,7 @@ INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\la
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 		INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:98-144
+		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:108-154
 	android:versionCode
 		INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
@@ -25,7 +25,7 @@ INJECTED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\la
 	xmlns:android
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:145-185
+		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:155-195
 supports-screens
 ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:3-163
 	android:largeScreens
@@ -39,13 +39,15 @@ ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launc
 	android:anyDensity
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:135-160
 application
-ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
+ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-126
 MERGED from [:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:5-64:19
 MERGED from [:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:5-64:19
 	android:extractNativeLibs
 		ADDED from [:unityLibrary] D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:26:18-50
 	android:label
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
+	android:roundIcon
+		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:81-123
 	android:icon
 		ADDED from D:\3D Endless Runner Game\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
 uses-sdk

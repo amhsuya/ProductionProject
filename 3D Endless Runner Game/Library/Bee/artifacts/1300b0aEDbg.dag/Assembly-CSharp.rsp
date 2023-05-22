@@ -351,6 +351,7 @@
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/Coin.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GateScript.cs"
 "Assets/Scripts/GroundSpawner.cs"
 "Assets/Scripts/GroundTile.cs"
 "Assets/Scripts/LeftSideSpawner.cs"
