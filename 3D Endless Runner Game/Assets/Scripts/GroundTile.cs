@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     GroundSpawner groundSpawner;
- 
+
     public GameObject obstaclePrefab1;
     public GameObject obstaclePrefab2;
 
@@ -48,13 +48,13 @@ public class GroundTile : MonoBehaviour
         Destroy(leftTile, 2);
         Destroy(rightTile, 2);
         Destroy(gameObject, 2);
-        
+
     }
     private void SpawnPowerUp()
     {
         int powerUpSpawnIndex = Random.Range(2, 5);
         Transform spawnPoint = transform.GetChild(powerUpSpawnIndex).transform;
-        bool spawnPowerUp = Random.Range(0, 60) == 0; 
+        bool spawnPowerUp = Random.Range(0, 60) == 0;
 
 
         if (spawnPowerUp)
@@ -64,14 +64,14 @@ public class GroundTile : MonoBehaviour
             if (!spawnObstacleOnPowerUpSpot)
             {
                 Instantiate(powerUpPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
-                
+
             }
         }
     }
 
 
 
-    
+
     void SpawnObstacle()
     {
         int obstacleSpawnCount = 0;
@@ -97,7 +97,7 @@ public class GroundTile : MonoBehaviour
         Instantiate(prefab, spawnPosition, Quaternion.identity, spawnPoint);
     }
 
-   
+
     void SpawnCoins()
     {
         float[] laneXPositions = { -3.3f, 0f, 3.3f };
@@ -121,7 +121,7 @@ public class GroundTile : MonoBehaviour
 
         return null; // Handle the case when all coins are active
     }
-    Vector3 GetRandomPointInCollider(Collider collider,float[] laneXPositions)
+    Vector3 GetRandomPointInCollider(Collider collider, float[] laneXPositions)
     {
         Vector3 point;
         float randomXPosition;
@@ -140,7 +140,7 @@ public class GroundTile : MonoBehaviour
         return point;
     }
 
- 
+
 
 
 }

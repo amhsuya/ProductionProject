@@ -706,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 494, y: -263}
+  m_AnchoredPosition: {x: 494, y: -209}
   m_SizeDelta: {x: 900, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455663318
@@ -731,7 +731,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 80
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1288,7 +1288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d559655092a63f64891a61a78d12504a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d559655092a63f64891a61a78d12504a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1537,7 +1537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -140}
+  m_AnchoredPosition: {x: 500, y: -116}
   m_SizeDelta: {x: 900, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1139934420
@@ -1562,7 +1562,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 120
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1743,7 +1743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 1000}
+  m_AnchoredPosition: {x: 424, y: 1060}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642232753
@@ -2064,11 +2064,11 @@ MonoBehaviour:
   currentLane: 0
   jumpForce: 500
   increaseSpeed: 0.3
-  jumpSound: {fileID: 8300000, guid: 912f6175a12922d4e935e78ec6173b4b, type: 3}
+  jumpSound: {fileID: 8300000, guid: f8df8af2005180445a15adbde5686f06, type: 3}
+  swipeSound: {fileID: 8300000, guid: 4eb320a7eca6f054288773327abfeba8, type: 3}
   hasMagnet: 0
   magnetDuration: 10
   magnetRadius: 5
-  coinSound: {fileID: 8300000, guid: 54bc15c6d5123b54e8db034245997201, type: 3}
   mainCamera: {fileID: 963194228}
 --- !u!64 &2001210496
 MeshCollider:

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDeadlyJump: 1
-  dieSound: {fileID: 8300000, guid: fef00d0c53e865a40abee2272b954b5d, type: 3}
+  dieSound: {fileID: 8300000, guid: 53b3f73eb275ae1418a7aebd5b072d9b, type: 3}
 --- !u!136 &-8037266577337369231
 CapsuleCollider:
   m_ObjectHideFlags: 0

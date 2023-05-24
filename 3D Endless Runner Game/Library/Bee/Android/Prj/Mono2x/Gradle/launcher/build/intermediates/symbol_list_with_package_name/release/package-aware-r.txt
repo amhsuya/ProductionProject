@@ -1,5 +1,4 @@
 com.A_t234.YatraTravelNepal
-drawable unity_static_splash
 id unitySurfaceView
 mipmap app_icon
 mipmap app_icon_round

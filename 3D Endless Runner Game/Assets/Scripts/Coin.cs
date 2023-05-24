@@ -40,7 +40,7 @@ public class Coin : MonoBehaviour
           isAttracted = true;
             Destroy(coin.gameObject);
         }
-        AudioSource.PlayClipAtPoint(coinSound, transform.position, 1);
+        AudioSource.PlayClipAtPoint(coinSound, transform.position,.5f);
         GameManager.instance.IncrementScore();
 
         Destroy(gameObject);

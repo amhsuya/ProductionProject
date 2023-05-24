@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalMultiplier = 3.3f;
 
     public Rigidbody rgbody;
-   
+
     bool alive = true;
 
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public float increaseSpeed = 0.5f;
 
     public AudioClip jumpSound;
-
+    public AudioClip swipeSound;
 
     public bool hasMagnet = false;
     public float magnetDuration = 10f;
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     private float cameraMoveDuration = 1f;
 
 
-    public AudioClip coinSound;
+  
 
     /// <summary>
     /// Components are initialized 
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void Start()
     {
-      
+
         currentLane = 0; // start in a random lane
         rgbody = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -20f, 0);
@@ -63,18 +63,19 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        if (!alive)  return;
-        
+        if (!alive) return;
+
         //moves player forward
         Vector3 forwardMove = transform.forward * speed * Time.fixedDeltaTime;
-        
+
 
         float targetX = currentLane * laneWidth;
         float deltaX = targetX - transform.position.x;
-        Vector3 horizontalMove = Vector3.right * deltaX / laneWidth *speed * horizontalMultiplier * Time.fixedDeltaTime;
+        Vector3 horizontalMove = Vector3.right * deltaX / laneWidth * speed * horizontalMultiplier * Time.fixedDeltaTime;
 
-        if(isJumping == true)
+        if (isJumping == true)
         {
+           
             rgbody.AddForce(Vector3.up * jumpForce);
             isJumping = false;
         }
@@ -132,15 +133,17 @@ public class PlayerMovement : MonoBehaviour
 
                     // set the current lane to the target lane
                     currentLane = targetLane;
-
+                    
                     isSwiping = false;
+                    AudioSource.PlayClipAtPoint(swipeSound, transform.position, 0.5f);
                 }
-                else if(deltaY > 50 && !isJumping && rgbody.velocity.y ==0 && Mathf.Abs(deltaX) < 50)
+                else if (deltaY > 50 && !isJumping && rgbody.velocity.y == 0 && Mathf.Abs(deltaX) < 50)
                 {
                     //rgbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isJumping = true;
                     isSwiping = false;
                     AudioSource.PlayClipAtPoint(jumpSound, transform.position, 0.3f);
+
                 }
             }
             else if (touch.phase == TouchPhase.Ended)
@@ -155,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
         speed += increaseSpeed * Time.deltaTime;
-      
+
 
         if (hasMagnet)
         {
@@ -171,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (collider.CompareTag("Coin"))
                     {
-                       
+
                         Coin coin = collider.GetComponent<Coin>();
                         if (coin != null)
                         {
@@ -185,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
         if (rotatingPlayer)
         {
             RotatePlayer();
-        }      
+        }
 
     }
     /// <summary>

@@ -347,8 +347,7 @@
         339,
         340,
         341,
-        342,
-        343
+        342
       ],
       "AllowUnexpectedOutput": true,
       "DebugActionIndex": 0
@@ -7716,17 +7715,6 @@
       "DebugActionIndex": 312
     },
     {
-      "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/drawable/unity_static_splash.png",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Temp/StagingArea/app_splash.png"
-      ],
-      "Outputs": [
-        "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/drawable/unity_static_splash.png"
-      ],
-      "DebugActionIndex": 313
-    },
-    {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon_round.png",
       "ActionType": "CopyFiles",
       "Inputs": [
@@ -7735,7 +7723,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 314
+      "DebugActionIndex": 313
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon_round.png",
@@ -7746,7 +7734,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 315
+      "DebugActionIndex": 314
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon_round.png",
@@ -7757,7 +7745,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 316
+      "DebugActionIndex": 315
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon_round.png",
@@ -7768,7 +7756,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 317
+      "DebugActionIndex": 316
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon_round.png",
@@ -7779,7 +7767,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 318
+      "DebugActionIndex": 317
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon_round.png",
@@ -7790,7 +7778,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon_round.png"
       ],
-      "DebugActionIndex": 319
+      "DebugActionIndex": 318
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_background.png",
@@ -7801,7 +7789,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 320
+      "DebugActionIndex": 319
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_background.png",
@@ -7812,7 +7800,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 321
+      "DebugActionIndex": 320
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
@@ -7823,7 +7811,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 322
+      "DebugActionIndex": 321
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
@@ -7834,7 +7822,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 323
+      "DebugActionIndex": 322
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
@@ -7845,7 +7833,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png"
       ],
-      "DebugActionIndex": 324
+      "DebugActionIndex": 323
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_foreground.png",
@@ -7856,7 +7844,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 325
+      "DebugActionIndex": 324
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
@@ -7867,7 +7855,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 326
+      "DebugActionIndex": 325
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
@@ -7878,7 +7866,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 327
+      "DebugActionIndex": 326
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
@@ -7889,7 +7877,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 328
+      "DebugActionIndex": 327
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
@@ -7900,7 +7888,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
       ],
-      "DebugActionIndex": 329
+      "DebugActionIndex": 328
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so",
@@ -7911,7 +7899,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 330
+      "DebugActionIndex": 329
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so",
@@ -7922,7 +7910,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 331
+      "DebugActionIndex": 330
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -7933,7 +7921,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 332
+      "DebugActionIndex": 331
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so",
@@ -7944,7 +7932,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so"
       ],
-      "DebugActionIndex": 333
+      "DebugActionIndex": 332
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so",
@@ -7955,7 +7943,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so"
       ],
-      "DebugActionIndex": 334
+      "DebugActionIndex": 333
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info",
@@ -7966,7 +7954,7 @@
         "Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 335
+      "DebugActionIndex": 334
     },
     {
       "Annotation": "Generate Manifests Library/Bee/artifacts/Android/Manifest/LauncherManifestDiag.txt (+3 others)",
@@ -8176,11 +8164,11 @@
         282,
         284,
         286,
-        335
+        334
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 336
+      "DebugActionIndex": 335
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so",
@@ -8191,7 +8179,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 337
+      "DebugActionIndex": 336
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -8202,7 +8190,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 338
+      "DebugActionIndex": 337
     },
     {
       "Annotation": "CopyFiles D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so",
@@ -8213,7 +8201,7 @@
       "Outputs": [
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 339
+      "DebugActionIndex": 338
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/unity_app_guid_b9qv.info",
@@ -8224,7 +8212,7 @@
         "Library/Bee/artifacts/csharpactions/unity_app_guid_b9qv.info"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 340
+      "DebugActionIndex": 339
     },
     {
       "Annotation": "GuidGenerator D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid",
@@ -8343,11 +8331,11 @@
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid"
       ],
       "ToBuildDependencies": [
-        340
+        339
       ],
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 341
+      "DebugActionIndex": 340
     },
     {
       "Annotation": "WriteText D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint",
@@ -8358,7 +8346,7 @@
         "D:/3D Endless Runner Game/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint"
       ],
       "AllowUnwrittenOutputFiles": true,
-      "DebugActionIndex": 342
+      "DebugActionIndex": 341
     },
     {
       "Annotation": "Player",
@@ -8604,13 +8592,12 @@
         331,
         332,
         333,
-        334,
-        336,
-        341,
-        342
+        335,
+        340,
+        341
       ],
       "AllowUnexpectedOutput": true,
-      "DebugActionIndex": 343
+      "DebugActionIndex": 342
     }
   ],
   "FileSignatures": [
@@ -8917,7 +8904,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 343
+          "Player": 342
         }
 ,  "DefaultNodes": [
     0

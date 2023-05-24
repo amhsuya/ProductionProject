@@ -124,37 +124,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1582}
+      Script: {instanceID: 1584}
     - Class: 114
-      Script: {instanceID: 2154}
+      Script: {instanceID: 2156}
     - Class: 114
-      Script: {instanceID: 2286}
+      Script: {instanceID: 2288}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 3050}
+      Script: {instanceID: 3052}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 4042}
+      Script: {instanceID: 4044}
     - Class: 114
-      Script: {instanceID: 4292}
+      Script: {instanceID: 4294}
     - Class: 114
-      Script: {instanceID: 4982}
+      Script: {instanceID: 4984}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5522}
     - Class: 114
-      Script: {instanceID: 5668}
+      Script: {instanceID: 5670}
     - Class: 114
-      Script: {instanceID: 5986}
+      Script: {instanceID: 5988}
     - Class: 114
-      Script: {instanceID: 6388}
+      Script: {instanceID: 6390}
     - Class: 114
-      Script: {instanceID: 6866}
+      Script: {instanceID: 6868}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,51 +215,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1582}
+      Script: {instanceID: 1584}
     - Class: 114
-      Script: {instanceID: 1766}
+      Script: {instanceID: 1768}
     - Class: 114
-      Script: {instanceID: 1898}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2572}
+      Script: {instanceID: 2574}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3050}
+      Script: {instanceID: 3052}
     - Class: 114
-      Script: {instanceID: 3378}
+      Script: {instanceID: 3380}
     - Class: 114
-      Script: {instanceID: 3630}
+      Script: {instanceID: 3632}
     - Class: 114
-      Script: {instanceID: 4036}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 4210}
+      Script: {instanceID: 4212}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 4900}
+      Script: {instanceID: 4902}
     - Class: 114
-      Script: {instanceID: 4982}
+      Script: {instanceID: 4984}
     - Class: 114
-      Script: {instanceID: 5226}
+      Script: {instanceID: 5228}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5522}
     - Class: 114
-      Script: {instanceID: 5668}
+      Script: {instanceID: 5670}
     - Class: 114
-      Script: {instanceID: 5986}
+      Script: {instanceID: 5988}
     - Class: 114
-      Script: {instanceID: 6388}
+      Script: {instanceID: 6390}
     - Class: 114
-      Script: {instanceID: 6510}
+      Script: {instanceID: 6512}
     - Class: 114
-      Script: {instanceID: 6976}
+      Script: {instanceID: 6978}
     - Class: 114
-      Script: {instanceID: 7200}
+      Script: {instanceID: 7202}
     - Class: 114
-      Script: {instanceID: 7366}
+      Script: {instanceID: 7368}
     - Class: 114
-      Script: {instanceID: 7600}
+      Script: {instanceID: 7602}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 122
@@ -609,7 +609,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b2302f1e44dfb2983ddd659e0022b5bf
+      Hash: 55b5009d3a36e1bf50217241e4181448
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1157,4 +1157,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Tamrakar/Desktop/YatraV2.apk
+  playerPath: C:/Users/Tamrakar/Documents/YatraV2.apk
