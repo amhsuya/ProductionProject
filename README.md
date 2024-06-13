@@ -1,7 +1,7 @@
 
 # Yatra (3D Endless Runner Game)
 
-Password Manager is a Django-based web application that allows users to securely store and manage their passwords.
+
 
 
 ## Features
