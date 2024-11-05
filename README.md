@@ -12,7 +12,5 @@
 - Avoid obstacles like stupas and rhododendrons to keep running.
 - Easy-to-learn controls for an immersive gaming experience.
 
-## Demo
 
-https://yatraanepal.000webhostapp.com/Website/home.ht%EF%BB%BFml
 
